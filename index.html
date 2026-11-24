@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KX76XF8R');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Robótica</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Cómo un robot sabe dónde está y decide cómo moverse: posiciones y giros, cinemática directa e inversa, dinámica, control PID, filtros de Kalman y de partículas, SLAM, planificación de movimiento y ROS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KX76XF8R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="wrap" data-page="index">
+<header class="topbar"><a class="brand" href="index.html"><b>Robótica</b></a><span class="eyebrow">Curso visual e interactivo · Computación</span><a class="al-sitio" href="https://aaramirez.github.io/">← Todos los cursos</a></header>
+<div class="layout">
+<nav class="toc" id="toc" aria-label="Ruta de aprendizaje"></nav>
+<main>
+
+<header class="hero">
+  <span class="eyebrow">Curso visual e interactivo · Computación</span>
+  <h1>Una aspiradora que no sabe dónde está y aun así limpia la casa</h1>
+  <p class="lede">Un robot nunca conoce su posición exacta: sus ruedas patinan, sus sensores mienten un poco y el mundo cambia. Aun así llega a la cocina, esquiva la silla y vuelve a su base. Este curso explica cómo, con la geometría que describe su cuerpo, el control que corrige su rumbo y la probabilidad que le dice dónde cree estar.</p>
+</header>
+
+<section>
+  <h2>Cómo usar este curso</h2>
+  <div class="prose">
+    <p><b>Estado.</b> El curso está en preparación. La <a href="temario.html">tabla de contenido</a> ya tiene los 12 capítulos con sus secciones y sus laboratorios, y está en revisión.</p>
+    <p><b>Para quién es.</b> Para estudiantes de computación que manejan matrices, derivadas y probabilidad básica. Lo necesario se repasa en una línea y está completo en Álgebra lineal, Cálculo y Probabilidad y estadística. Aprender a moverse por prueba y error está en Aprendizaje por refuerzo; la electrónica de sensores y microcontroladores, en Sistemas embebidos e IoT; interpretar imágenes, en Visión por computador.</p>
+    <p><b>Cómo está hecho.</b> Una aspiradora robot simulada en 2D recorre el curso: empieza como un punto que obedece órdenes, gana ruedas, sensores, un controlador, un filtro que estima su posición, un mapa de la casa y un planificador de cobertura, y termina descrita como nodos de ROS. Para la cinemática de manipuladores se suma un brazo planar. Cada laboratorio deja mover parámetros (ganancias, ruido, partículas, obstáculos) y ver al robot comportarse distinto.</p>
+  </div>
+</section>
+
+<details class="stage" id="temario" open><summary><h2><span class="pn">Empieza aquí</span> Tabla de contenido</h2></summary>
+  <div class="mods">
+    <a class="mod" href="temario.html"><span class="n">≡</span><b>Tabla de contenido</b><p>Cada capítulo con sus secciones y sus laboratorios.</p></a>
+  </div>
+</details>
+
+<details class="stage" id="parte-1" open><summary><h2><span class="pn">Parte 1</span> El cuerpo del robot</h2><span class="cuenta" data-etapa-cuenta="1"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="que-es-un-robot"><span class="n">01</span><b>Qué es un robot: sentir, pensar, actuar</b><p>Tipos de robots, el ciclo de percepción y acción, y la aspiradora que recorre el curso.</p></div>
+    <div class="mod soon" data-id="posiciones-y-giros"><span class="n">02</span><b>Representar posiciones y giros</b><p>Marcos de referencia, matrices de rotación, ángulos de Euler, cuaterniones y transformaciones homogéneas.</p></div>
+    <div class="mod soon" data-id="cinematica-directa"><span class="n">03</span><b>Cinemática directa: de las articulaciones y las ruedas a la pose</b><p>Dónde queda la punta de un brazo dados sus ángulos, y dónde queda un robot móvil dadas sus ruedas.</p></div>
+    <div class="mod soon" data-id="cinematica-inversa"><span class="n">04</span><b>Cinemática inversa y el jacobiano</b><p>Qué ángulos ponen la punta donde se quiere, cómo se relacionan las velocidades y dónde el robot pierde movilidad.</p></div>
+    <div class="mod soon" data-id="dinamica"><span class="n">05</span><b>Dinámica: fuerzas, pares y simulación</b><p>Las ecuaciones de movimiento de un robot con Newton-Euler y Lagrange, y cómo se simulan.</p></div>
+  </div>
+</details>
+
+<details class="stage" id="parte-2" open><summary><h2><span class="pn">Parte 2</span> Sentir y controlar</h2><span class="cuenta" data-etapa-cuenta="2"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="sensores-y-actuadores"><span class="n">06</span><b>Sensores y actuadores</b><p>Qué mide cada sensor, cómo se equivoca y qué motores mueven al robot.</p></div>
+    <div class="mod soon" data-id="control"><span class="n">07</span><b>Control: del lazo abierto al PID</b><p>Realimentación, el controlador PID, su sintonía y el seguimiento de trayectorias.</p></div>
+  </div>
+</details>
+
+<details class="stage" id="parte-3" open><summary><h2><span class="pn">Parte 3</span> Saber dónde está</h2><span class="cuenta" data-etapa-cuenta="3"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="filtro-de-kalman"><span class="n">08</span><b>Estimación bayesiana y el filtro de Kalman</b><p>El filtro de Bayes, su versión gaussiana y lineal, y la extensión a robots no lineales.</p></div>
+    <div class="mod soon" data-id="filtro-de-particulas"><span class="n">09</span><b>Filtro de partículas y localización de Monte Carlo</b><p>Representar la creencia con miles de muestras para resolver la localización global y el robot secuestrado.</p></div>
+    <div class="mod soon" data-id="mapeo-y-slam"><span class="n">10</span><b>Mapeo y SLAM</b><p>Construir el mapa de la casa mientras se estima dónde está el robot dentro de ese mapa.</p></div>
+  </div>
+</details>
+
+<details class="stage" id="parte-4" open><summary><h2><span class="pn">Parte 4</span> Decidir y moverse</h2><span class="cuenta" data-etapa-cuenta="4"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="planificacion-de-movimiento"><span class="n">11</span><b>Planificación de movimiento</b><p>El espacio de configuraciones, la búsqueda en rejillas, los planificadores por muestreo, la cobertura y la evasión de obstáculos.</p></div>
+    <div class="mod soon" data-id="ros-y-robots-reales"><span class="n">12</span><b>ROS y los robots reales</b><p>Cómo se arma el software de un robot con ROS 2, se simula y se lleva al mundo con seguridad.</p></div>
+  </div>
+</details>
+
+
+
+<nav class="pager" id="pager" aria-label="Capítulo anterior y siguiente"></nav>
+</main>
+</div>
+<footer><span>Curso abierto de aaramirez.github.io.</span><span>Sitio publicado: <a href="https://github.com/aaramirez/robotica" target="_blank" rel="noopener">github.com/aaramirez/robotica</a></span></footer>
+</div>
+<script src="assets/lab.js"></script>
+</body>
+</html>
